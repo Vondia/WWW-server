@@ -27,6 +27,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      isAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+      accountBlocked: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
     },
     {
       sequelize,
