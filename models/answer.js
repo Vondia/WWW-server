@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   answer.init(
     {
-      storiesId: DataTypes.INTEGER,
       answer: { type: DataTypes.STRING, allowNull: false },
       correctAnswer: { type: DataTypes.BOOLEAN, allowNull: false },
+      storiesId: { type: DataTypes.INTEGER, allowNull: false },
     },
     {
       sequelize,

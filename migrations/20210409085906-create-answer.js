@@ -8,7 +8,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      storiesId: {
+      answer: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      correctAnswer: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+      },
+      storyId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -17,14 +25,6 @@ module.exports = {
         },
         onUpdate: "CASCADE",
         onDelete: "SET NULL",
-      },
-      answer: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      correctAnswer: {
-        allowNull: false,
-        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
