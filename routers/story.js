@@ -7,6 +7,18 @@ const { Router } = express;
 
 const router = new Router();
 
+router.get("/", async (req, res, next) => {
+  try {
+    console.log("Im getting all the stories");
+    const stories = await Story.findAll({
+      include: [Answer],
+    });
+    res.send(stories);
+  } catch (e) {
+    next(e);
+  }
+});
+
 //GET an user by id
 //OPEN AT THE BROWSER localhost:4000/user/id
 router.get("/:storyId", async (req, res, next) => {
