@@ -8,8 +8,7 @@ module.exports = {
         {
           name: "Sagrada Familia",
           storySentence: "Gaudi's life work",
-          preziUrl:
-            '<iframe src="https://prezi.com/p/kr9wclafgov5/embed/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="1080" width="1920"></iframe>',
+          preziUrl: "https://prezi.com/p/kr9wclafgov5/embed/",
           imageUrl: "https://weekend.knack.be/medias/11274/5772435.jpg",
           question: "When is the Sagrada Familia scheduled to be finished?",
           createdAt: new Date(),
