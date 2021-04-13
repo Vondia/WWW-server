@@ -12,6 +12,7 @@ router.get("/", async (req, res, next) => {
     console.log("Im getting all the stories");
     const stories = await Story.findAll({
       include: [Answer],
+      order: [["createdAt", "ASC"]],
     });
     res.send(stories);
   } catch (e) {
@@ -35,65 +36,86 @@ router.get("/:storyId", async (req, res, next) => {
   }
 });
 
-router.post("/", auth, async (req, res) => {
-  const { name, storySentence, preziUrl, imageUrl, question } = req.body;
+router.post("/", auth, async (req, res, next) => {
+  try {
+    const {
+      name,
+      storySentence,
+      preziUrl,
+      imageUrl,
+      question,
+      answer1,
+      answer2,
+      answer3,
+      answer4,
+      correctAnswer1,
+      correctAnswer2,
+      correctAnswer3,
+      correctAnswer4,
+    } = req.body;
 
-  if (!name) {
-    return res.status(400).send({ message: "A story must have a name" });
+    if (!name) {
+      return res.status(400).send({ message: "A story must have a name" });
+    }
+
+    if (!storySentence) {
+      return res
+        .status(400)
+        .send({ message: "A story must have an engaging sentance" });
+    }
+
+    if (!preziUrl) {
+      return res.status(400).send({ message: "A story must have a prezi Url" });
+    }
+
+    if (!imageUrl) {
+      return res
+        .status(400)
+        .send({ message: "A story must have an image Url" });
+    }
+
+    if (!question) {
+      return res.status(400).send({ message: "A story must have a question" });
+    }
+
+    const newStoryDone = await Story.create({
+      name,
+      storySentence,
+      preziUrl,
+      imageUrl,
+      question,
+    });
+
+    const newAnswer = await Answer.bulkCreate([
+      {
+        storyId: newStoryDone.id,
+        answer: answer1,
+        correctAnswer: correctAnswer1,
+      },
+      {
+        storyId: newStoryDone.id,
+        answer: answer2,
+        correctAnswer: correctAnswer2,
+      },
+      {
+        storyId: newStoryDone.id,
+        answer: answer3,
+        correctAnswer: correctAnswer3,
+      },
+      {
+        storyId: newStoryDone.id,
+        answer: answer4,
+        correctAnswer: correctAnswer4,
+      },
+    ]);
+    return res.status(201).send({
+      message: "Story created",
+      newStoryDone,
+      newAnswer,
+    });
+  } catch (e) {
+    next(e);
   }
-
-  if (!storySentence) {
-    return res
-      .status(400)
-      .send({ message: "A story must have an engaging sentance" });
-  }
-
-  if (!preziUrl) {
-    return res.status(400).send({ message: "A story must have a prezi Url" });
-  }
-
-  if (!imageUrl) {
-    return res.status(400).send({ message: "A story must have an image Url" });
-  }
-
-  if (!question) {
-    return res.status(400).send({ message: "A story must have a question" });
-  }
-
-  const newStoryDone = await Story.create({
-    name,
-    storySentence,
-    preziUrl,
-    imageUrl,
-    question,
-  });
-
-  return res.status(201).send({ message: "Story created", newStoryDone });
 });
-
-// router.post("/tasks", async (req, res) => {
-//   const { name, status, doctorId, userId } = req.body;
-//   if (!name || !userId) {
-//     return res.status(400).send("Please try again");
-//   }
-
-//   try {
-//     const newTask = await Task.create({
-//       name,
-//       userId,
-//       doctorId,
-//       status,
-//     });
-//     //   delete newUser.dataValues["password"]; // don't send back the password hash
-//     //   const token = toJWT({ userId: newUser.id });
-//     res.status(201).json({ ...newTask.dataValues });
-//   } catch (error) {
-//     if (error.name === "SequelizeUniqueConstraintError") {
-//       return res.status(400).send({ message: "There is an error" });
-//     }
-
-//     return res.status(400).send({ message: "you added a task" });
-//   }
-// });
 
 module.exports = router;
