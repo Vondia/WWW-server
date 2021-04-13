@@ -118,4 +118,35 @@ router.post("/", auth, async (req, res, next) => {
   }
 });
 
+router.delete("/:id", auth, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { isAdmin } = req.user;
+
+    if (!isAdmin) {
+      return res.status(403).send({
+        message: "You are not authorized become an Admin and we can talk",
+      });
+    }
+
+    const storyToDelete = await Story.findByPk(id);
+
+    if (!storyToDelete) {
+      return res.status(404).send({ message: "Story does not exist" });
+    }
+
+    const deletedStory = await storyToDelete.destroy({
+      where: { id: id },
+    });
+
+    return res.status(200).send({
+      message: "Story deleted successfully!",
+      deletedStory,
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(400).send({ message: "Something went wrong, sorry" });
+  }
+});
+
 module.exports = router;
