@@ -287,6 +287,63 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          storyId: 11,
+          answer: "150 meter",
+          correctAnswer: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 11,
+          answer: "25 meter",
+          correctAnswer: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 11,
+          answer: "68 meter",
+          correctAnswer: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 11,
+          answer: "23 meter",
+          correctAnswer: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 12,
+          answer:
+            "De architect probeert de natuur zo min mogelijk te beschadigen",
+          correctAnswer: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 12,
+          answer: "De architect graag in de natuur loopt",
+          correctAnswer: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 12,
+          answer: "De architect de natuur gebruikt als inspiratiebron",
+          correctAnswer: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          storyId: 12,
+          answer: "De architect goed kan organiseren",
+          correctAnswer: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );

@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           name: "Vianden",
-          storySentence: "Kasteel op een berg",
+          storySentence: "Een strategische plek",
           preziUrl: "https://prezi.com/p/kr9wclafgov5/embed/",
           imageUrl:
             "https://www.visit-vianden.lu/media/cache/1071_resized_400_400_90_5d2c64e007a75_vianden_dan4174-hdrm_albd_hdfb.jpg",
@@ -17,7 +17,7 @@ module.exports = {
         },
         {
           name: "Schaffhausen",
-          storySentence: "Een wilde stad",
+          storySentence: "Een spectaculaire sprong",
           preziUrl: "https://prezi.com/embed/-lbnk9fpokt5/",
           imageUrl:
             "https://www.suedkurier.de/storage/image/6/6/0/5/12945066_shift-966x593_1wmQuk_UzCUHG.jpg",
@@ -28,7 +28,7 @@ module.exports = {
         },
         {
           name: "Sagrada Familia",
-          storySentence: "Van appel tot gebouw",
+          storySentence: "Gaudi's meesterwerk",
           preziUrl: "https://prezi.com/p/_vjrnovaf7ch/embed/",
           imageUrl: "https://weekend.knack.be/medias/11274/5772435.jpg",
           question:
@@ -38,7 +38,7 @@ module.exports = {
         },
         {
           name: "Corsica",
-          storySentence: "Kleine man grote daden.",
+          storySentence: "Een Pyramide in België?",
           preziUrl: "https://prezi.com/p/8sfqcr3mrb2y/embed/",
           imageUrl:
             "https://i.pinimg.com/originals/4d/6c/77/4d6c77cd607a3cf110966e0f7db26a5f.jpg",
@@ -59,7 +59,7 @@ module.exports = {
         },
         {
           name: "Vianden",
-          storySentence: "Kasteel op een berg",
+          storySentence: "Een strategische plek",
           preziUrl: "https://prezi.com/p/kr9wclafgov5/embed/",
           imageUrl:
             "https://www.visit-vianden.lu/media/cache/1071_resized_400_400_90_5d2c64e007a75_vianden_dan4174-hdrm_albd_hdfb.jpg",
@@ -69,7 +69,7 @@ module.exports = {
         },
         {
           name: "Schaffhausen",
-          storySentence: "Een wilde stad",
+          storySentence: "Een spectaculaire sprong",
           preziUrl: "https://prezi.com/embed/-lbnk9fpokt5/",
           imageUrl:
             "https://www.suedkurier.de/storage/image/6/6/0/5/12945066_shift-966x593_1wmQuk_UzCUHG.jpg",
@@ -80,7 +80,7 @@ module.exports = {
         },
         {
           name: "Sagrada Familia",
-          storySentence: "Van appel tot gebouw",
+          storySentence: "Gaudi's meesterwerk",
           preziUrl: "https://prezi.com/p/_vjrnovaf7ch/embed/",
           imageUrl: "https://weekend.knack.be/medias/11274/5772435.jpg",
           question:
@@ -90,7 +90,7 @@ module.exports = {
         },
         {
           name: "Corsica",
-          storySentence: "Kleine man grote daden.",
+          storySentence: "Een Pyramide in België?",
           preziUrl: "https://prezi.com/p/8sfqcr3mrb2y/embed/",
           imageUrl:
             "https://i.pinimg.com/originals/4d/6c/77/4d6c77cd607a3cf110966e0f7db26a5f.jpg",
@@ -101,7 +101,7 @@ module.exports = {
         },
         {
           name: "Het terracottaleger",
-          storySentence: "Leger onder de grond",
+          storySentence: "Een heel leger onder de grond",
           preziUrl: "https://prezi.com/p/3yd8udycls1r/embed/",
           imageUrl:
             "https://reisboulevard.nl/wp-content/uploads/2018/09/Chinese-terracottaleger-Qin-Shi-Huang.jpg",
@@ -110,12 +110,23 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          name: "Vianden",
-          storySentence: "The smallest 'kanton' from Luxembourg",
-          preziUrl: "https://prezi.com/p/kr9wclafgov5/embed/",
+          name: "Schaffhausen",
+          storySentence: "Een spectaculaire sprong",
+          preziUrl: "https://prezi.com/embed/-lbnk9fpokt5/",
           imageUrl:
-            "https://www.visit-vianden.lu/media/cache/1071_resized_400_400_90_5d2c64e007a75_vianden_dan4174-hdrm_albd_hdfb.jpg",
-          question: "What is a 'kanton'?",
+            "https://www.suedkurier.de/storage/image/6/6/0/5/12945066_shift-966x593_1wmQuk_UzCUHG.jpg",
+          question:
+            "Hoeveel meter valt het water bij Schaffhausen naar beneden?",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Sagrada Familia",
+          storySentence: "Gaudi's meesterwerk",
+          preziUrl: "https://prezi.com/p/_vjrnovaf7ch/embed/",
+          imageUrl: "https://weekend.knack.be/medias/11274/5772435.jpg",
+          question:
+            "Gaudi wordt beschouwd als de grondlegger van de organische architectuur. Organische architectuur wil zeggen dat:",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
