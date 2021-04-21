@@ -70,6 +70,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "Juf Anja",
+          email: "anjaschouten@gmail.com",
+          password: bcrypt.hashSync("Schouten58", SALT_ROUNDS),
+          accountBlocked: false,
+          isAdmin: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
