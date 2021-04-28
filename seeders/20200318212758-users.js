@@ -72,8 +72,8 @@ module.exports = {
         },
         {
           name: "Juf Anja",
-          email: "anjaschouten@gmail.com",
-          password: bcrypt.hashSync("Schouten58", SALT_ROUNDS),
+          email: "wereldwijdeweetjes@gmail.com",
+          password: bcrypt.hashSync("Wereldww58=", SALT_ROUNDS),
           accountBlocked: false,
           isAdmin: true,
           createdAt: new Date(),
