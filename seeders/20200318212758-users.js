@@ -79,6 +79,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "TIG account",
+          email: "makiko@tig.com",
+          password: bcrypt.hashSync("TIG", SALT_ROUNDS),
+          accountBlocked: false,
+          isAdmin: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
